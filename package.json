@@ -1,0 +1,16 @@
+{
+  "name": "snaptest-harness",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/nightwatch tests/",
+    "all": "./node_modules/.bin/nightwatch tests/",
+    "browserstack": "./node_modules/.bin/nightwatch -c conf/browserstack.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nightwatch": "^0.9.12"
+  }
+}
