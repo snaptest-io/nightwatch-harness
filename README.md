@@ -8,8 +8,7 @@ SnapTEST Harness
 * Install NodeJS. ( via Homebrew or https://nodejs.org ).
 * Clone this repo `git clone <url>`
 * Run `npm install` in the cloned repository
-* Download chromedriver: [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
-* Copy the chromedriver file to /usr/local/bin (this will make it available on the terminal by typing `chromedriver`)
+* Download [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/) and copy to /usr/local/bin (or any folder that makes it available on your path)
 
 (PC)
 * Add these steps
