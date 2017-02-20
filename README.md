@@ -4,7 +4,7 @@
 ### 1. Install dependencies  
 
 *(Mac)*
-* Install NodeJS. ( via Homebrew or https://nodejs.org ).
+* Install NodeJS. ( via [homebrew](https://brew.sh/) or https://nodejs.org ).
 * Clone this repo `git clone <url>`
 * Run `npm install` in the cloned repository
 * Download [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/) and copy to /usr/local/bin (or any folder that makes it available on your path)
