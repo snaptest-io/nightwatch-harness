@@ -27,16 +27,16 @@ Advanced usage/configuration
 
 ### Adding multiple tests
 
-    Any file within the `tests/` folder is available to be run as a test.  Add more tests to this folder, eg. `/tests/login.js`, and build your test library.  To run all the tests in the `tests/` folder, use `npm test`.
+Any file within the `tests/` folder is available to be run as a test.  Add more tests to this folder, eg. `/tests/login.js`, and build your test library.  To run all the tests in the `tests/` folder, use `npm test`.
 
 ### Organizing and scaling execution of tests
 
-    If you're working on a larger project, you may need to work on organizing your test folders appropriately.  the `tests/` folder does support one folder deep, so you can add tests like the following:
+If you're working on a larger project, you may need to work on organizing your test folders appropriately.  the `tests/` folder does support one folder deep, so you can add tests like the following:
     
     `tests/newuser/registerandonboard.js`
     `tests/returninguser/changepassword.js`
 
-    For further abstraction, you can add a `scripts` entry in the package.json, create a separate nightwatch.js/on config that points to a different folder than `test/`.  
+For further abstraction, you can add a `scripts` entry in the package.json, create a separate nightwatch.js/on config that points to a different folder than `test/`.  
 
 *Example: Setting up seperate test jobs between development and production:*
 
