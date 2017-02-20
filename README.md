@@ -13,26 +13,25 @@ SnapTEST Harness
 (PC)
 * Add these steps
 
-2. Add the test/s
+2. Add the test
 -----------------  
-* Generate a test using the SnapTEST extension.
-* Copy and paste the code, and add it to the tests/harness.js file.
+* Copy and paste the SnapTEST generated code into the tests/harness.js file.
 
-3. Run the tests
+3. Run the test
 -----------------
-* Kick off the tests by running `npm test`. Sit back and watch the magic happen.
+* Kick off the test by running `npm test`. 
 
 ---
 
 Advanced usage/configuration
 ========
 
-Adding more tests
+Adding multiple tests
 -----------------
 
-    Any file within the tests/ folder is available to be run as a test.  Add more tests, eg. `/tests/login.js`, and build your test library.
+    Any file within the `tests/` folder is available to be run as a test.  Add more tests to this folder, eg. `/tests/login.js`, and build your test library.  To run all the tests in the `tests/` folder, use `npm test`.
 
-Organizing and running multiple tests
+Organizing and scaling execution of tests
 -----------------
 
     If you're working on a larger project, you may need to work on organizing your test folders appropriately.  the `tests/` folder does support one folder deep, so you can add tests like the following:
@@ -40,7 +39,7 @@ Organizing and running multiple tests
     `tests/newuser/registerandonboard.js`
     `tests/returninguser/changepassword.js`
 
-    For further abstraction, you can add a `scripts` entry in the package.json, create a separate nightwatch.js/on config that points to different folder than `test/`.  
+    For further abstraction, you can add a `scripts` entry in the package.json, create a separate nightwatch.js/on config that points to a different folder than `test/`.  
 
 *Example: Setting up seperate test jobs between development and production:*
 
@@ -81,7 +80,7 @@ After you've built a lot of tests, you may want to run one at a time.  Use this 
 Test setup/teardown advice
 -----------------
 
-Making QA tests is complicated in many ways which SnapTEST tries to solve.  Unfortunately, we can't solve them all, and that is setting up and tearing down test data.  This is complicated because each project has unique challenges in this area.  You will need to solve the issue for your case, or just be careful to make tests that always start inherently fresh (like registering a new user).
+Making QA tests is complicated in many ways which SnapTEST tries to solve.  Unfortunately, we can't solve them all, and one is that setting up and tearing down test data can be tricky.  This is complicated because each project has unique challenges in this area.  You will need to solve the issue for your case, or just be careful to make tests that always start inherently fresh (like registering a new user).
 
 *eg: Your test logs in and changes a users password.  The second time it runs, the password will be changed and not be able to log in and fail*.  
 
