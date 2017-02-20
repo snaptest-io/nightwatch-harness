@@ -4,13 +4,13 @@ SnapTEST Harness
 1. Install dependencies
 --------  
 
-(Mac)
+*(Mac)*
 * Install NodeJS. ( via Homebrew or https://nodejs.org ).
 * Clone this repo `git clone <url>`
 * Run `npm install` in the cloned repository
 * Download [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/) and copy to /usr/local/bin (or any folder that makes it available on your path)
 
-(PC)
+*(PC)*
 * Add these steps
 
 2. Add the test
