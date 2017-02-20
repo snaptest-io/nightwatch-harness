@@ -22,7 +22,7 @@
 
 ---
 
-Advanced usage/configuration
+Advanced usage
 ========
 
 ### Adding multiple tests
@@ -31,14 +31,14 @@ Any file within the `tests/` folder is available to be run as a test.  Add more 
 
 ### Organizing and scaling execution of tests
 
-If you're working on a larger project, you may need to work on organizing your test folders appropriately.  the `tests/` folder does support one folder deep, so you can add tests like the following:
+If you're working on a larger project, you will need to work on organizing your test files.  the `tests/` folder supports one folder deep, so you can do the following:
     
     `tests/newuser/registerandonboard.js`
     `tests/returninguser/changepassword.js`
 
 For further abstraction, you can add a `scripts` entry in the package.json, create a separate nightwatch.js/on config that points to a different folder than `test/`.  
 
-*Example: Setting up seperate test jobs between development and production:*
+*Example: Setting up seperate job between development(build tests) and production(smoke tests):*
 
 package.json:
 ```
@@ -70,7 +70,7 @@ For more configuration options, please visit [Nightwatch's documentation](http:/
 
 ### Running single tests
 
-After you've built a lot of tests, you may want to run one at a time.  Use this command:
+After you've built a lot of tests, you may want to run only one to save time.  Use this command:
 `./node_modules/.bin/nightwatch -t test/harness.js`
 
 ### Test setup/teardown advice
@@ -79,9 +79,7 @@ Making QA tests is complicated in many ways which SnapTEST tries to solve.  Unfo
 
 *eg: Your test logs in and changes a users password.  The second time it runs, the password will be changed and not be able to log in and fail*.  
 
-Tests need to start "fresh".  Setting up and tearing down a user every time you run the test is the way to solve the issue.  
-
-For prehook and posthooks of your nightwatch tests, use these helper methods:
+Tests need to start "fresh".  Setting up and tearing down a user every time you run the test is the way to solve the issue.  For prehook and posthooks of your nightwatch tests, use these helper methods:
 
 ```
   before : function(browser, done) {
