@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/nightwatch tests/",
-    "all": "./node_modules/.bin/nightwatch tests/",
+    "harness": "./node_modules/.bin/nightwatch -t tests/harness.js",
     "browserstack": "./node_modules/.bin/nightwatch -c conf/browserstack.js"
   },
   "author": "",
