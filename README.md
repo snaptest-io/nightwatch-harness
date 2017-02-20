@@ -1,11 +1,13 @@
 SnapTEST Harness
 ================
 
-Overview:
-========
+***Overview:***
+
 1.  Install harness dependencies (node & chromedriver)
 2.  Copy tests into the `/tests/harness.js` file
 3.  `npm start` to run the tests
+
+---
 
 1. Install dependencies
 --------  
