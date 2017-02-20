@@ -1,8 +1,7 @@
-SnapTEST Harness
-================
+# SnapTEST Harness
 
-1. Install dependencies
---------  
+
+### 1. Install dependencies  
 
 *(Mac)*
 * Install NodeJS. ( via Homebrew or https://nodejs.org ).
@@ -13,12 +12,12 @@ SnapTEST Harness
 *(PC)*
 * Add these steps
 
-2. Add the test
------------------  
+### 2. Add the test
+  
 * Copy and paste the SnapTEST generated code into the tests/harness.js file.
 
-3. Run the test
------------------
+### 3. Run the test
+
 * Kick off the test by running `npm test`. 
 
 ---
@@ -26,13 +25,11 @@ SnapTEST Harness
 Advanced usage/configuration
 ========
 
-Adding multiple tests
------------------
+### Adding multiple tests
 
     Any file within the `tests/` folder is available to be run as a test.  Add more tests to this folder, eg. `/tests/login.js`, and build your test library.  To run all the tests in the `tests/` folder, use `npm test`.
 
-Organizing and scaling execution of tests
------------------
+### Organizing and scaling execution of tests
 
     If you're working on a larger project, you may need to work on organizing your test folders appropriately.  the `tests/` folder does support one folder deep, so you can add tests like the following:
     
@@ -71,14 +68,12 @@ nightwatch-dev.js:
 
 For more configuration options, please visit [Nightwatch's documentation](http://nightwatchjs.org/guide)
 
-Running single tests
------------------
+### Running single tests
 
 After you've built a lot of tests, you may want to run one at a time.  Use this command:
 `./node_modules/.bin/nightwatch -t test/harness.js`
 
-Test setup/teardown advice
------------------
+### Test setup/teardown advice
 
 Making QA tests is complicated in many ways which SnapTEST tries to solve.  Unfortunately, we can't solve them all, and one is that setting up and tearing down test data can be tricky.  This is complicated because each project has unique challenges in this area.  You will need to solve the issue for your case, or just be careful to make tests that always start inherently fresh (like registering a new user).
 
