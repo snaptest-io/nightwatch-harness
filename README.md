@@ -1,4 +1,4 @@
-# SnapTEST Harness
+# SnapTEST NightwatchJS Harness
 
 
 ### 1. Install dependencies  
