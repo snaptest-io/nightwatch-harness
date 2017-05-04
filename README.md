@@ -1,16 +1,18 @@
-# SnapTest Harness
-
+# SnapTest NightwatchJS Harness
 
 ### 1. Install dependencies  
 
-*(Mac)*
+*(MacOS)*
 * Install NodeJS. ( via [homebrew](https://brew.sh/) or https://nodejs.org ).
 * Clone this repo `git clone <url>`
 * Run `npm install` in the cloned repository
 * Download [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/) and copy to /usr/local/bin (or any folder that makes it available on your path)
 
-*(PC)*
-* Add these steps
+*(Windows)*
+* Install NodeJS. ( via https://nodejs.org ).
+* Clone this repo `git clone <url>`
+* Run `npm install` in the cloned repository
+* Download chromedriver and copy to %systemroot%\System32  (or any folder that makes it available on your ENV path)
 
 ### 2. Add the test
   
