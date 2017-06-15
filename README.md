@@ -50,7 +50,8 @@ If you're working on a larger project, you will need organize your test files. T
 
 After you've built a lot of tests, you may want to run only one to save time.  Use this command:
 ```
-./node_modules/.bin/nightwatch -t test/harness.js```
+./node_modules/.bin/nightwatch -t test/harness.js
+```
 
 ### Test setup/teardown advice
 
