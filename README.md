@@ -17,7 +17,7 @@
 ### 2. Running via copying & pasting single test code
   
 * Copy and paste the SnapTest generated code into the harness.js file.
-* Run by typing `npm test`. 
+* Run by typing `npm run harness`. 
 
 ### 3. Run via folder generation (preferred)
 
