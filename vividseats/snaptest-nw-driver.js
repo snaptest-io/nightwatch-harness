@@ -1,45 +1,6 @@
-const TIMEOUT = 5000;
+const TIMEOUT = 10000;
 
-module.exports = {
-  "Unnamed test": function(browser) {
-
-    bindHelpers(browser);
-    bindComponents(browser);
-
-    var baseUrl = browser.launchUrl || "http://www-dashboard.hologram.io"
-
-    browser
-        .url(baseUrl, "/account/login", 848, 730, `Load page... "http://www-dashboard.hologram.io/account/login"`)
-        .click("div > div:nth-of-type(4) > a:nth-of-type(2)", `Click element`)
-        .switchToWindow(1, `CHANGE_WINDOW_AUTO`)
-        .initNewPage("/terms-of-use/", `DOM ready & path is... "/terms-of-use/"`)
-        .click("article > div > p:nth-of-type(2)", `Click element`)
-        .click("article > div > p:nth-of-type(3)", `Click element`)
-        .end();
-  }
-};
-
-/*
- * Components 
- */
-
-function bindComponents(browser) {
-
-  browser.components = {};
-
-
-}
-
-/*
- * Auto-Generated helper code 
- */
-
-const random = "" + parseInt(Math.random() * 1000000);
-const random1 = "" + parseInt(Math.random() * 1000000);
-const random2 = "" + parseInt(Math.random() * 1000000);
-const random3 = "" + parseInt(Math.random() * 1000000);
-
-function bindHelpers(browser) {
+module.exports.bindHelpers = function(browser) {
 
   var oldUrl = browser.url;
   var oldBack = browser.back;
@@ -126,9 +87,7 @@ function bindHelpers(browser) {
 
   browser.scrollElement = function(selector, x, y, description, timeout) {
     browser.perform(() => comment(description));
-    browser.elementPresent(selector, null, () => {
-      browser.assert.ok(false, description)
-    }, timeout);
+    browser.elementPresent(selector, null, () => { browser.assert.ok(false, description) }, timeout);
     browser.execute(function(selector, x, y) {
       (function(el, x, y) {
         el.scrollLeft = x;
@@ -141,9 +100,7 @@ function bindHelpers(browser) {
 
   browser.scrollWindowToElement = function(selector, description, timeout) {
     browser.perform(() => comment(description));
-    browser.elementPresent(selector, null, () => {
-      browser.assert.ok(false, description)
-    }, timeout);
+    browser.elementPresent(selector, null, () => { browser.assert.ok(false, description) }, timeout);
     browser.execute(function(selector, value) {
       (function(el) {
         if (el) {
@@ -158,9 +115,7 @@ function bindHelpers(browser) {
 
   browser.click = function(selector, description, timeout) {
     browser.perform(() => comment(description));
-    browser.elementPresent(selector, null, () => {
-      browser.assert.ok(false, description)
-    }, timeout);
+    browser.elementPresent(selector, null, () => { browser.assert.ok(false, description)}, timeout);
     browser.execute(function(selector) {
 
       (function(element) {
@@ -186,28 +141,22 @@ function bindHelpers(browser) {
 
   browser.changeInput = function(selector, value, description, timeout) {
     browser.perform(() => comment(description));
-    browser.elementPresent(selector, null, () => {
-      browser.assert.ok(false, description)
-    }, timeout);
+    browser.elementPresent(selector, null, () => { browser.assert.ok(false, description) }, timeout);
     browser.execute(function(selector, value) {
 
       (function(el) {
         function triggerKeyEvent(node, eventType) {
-          var keydownEvent = document.createEvent('KeyboardEvent');
-          keydownEvent.initEvent(eventType, true, false, null, 0, false, 0, false, 66, 0);
-          node.dispatchEvent(keydownEvent);
+          var keydownEvent = document.createEvent( 'KeyboardEvent' );
+          keydownEvent.initEvent( eventType, true, false, null, 0, false, 0, false, 66, 0 );
+          node.dispatchEvent( keydownEvent );
         }
 
         if (el) {
           triggerKeyEvent(el, "keydown");
           el.focus();
           el.value = value;
-          el.dispatchEvent(new Event('change', {
-            bubbles: true
-          }));
-          el.dispatchEvent(new Event('input', {
-            bubbles: true
-          }));
+          el.dispatchEvent(new Event('change', {bubbles: true}));
+          el.dispatchEvent(new Event('input', {bubbles: true}));
           triggerKeyEvent(el, "keyup");
           triggerKeyEvent(el, "keypress");
         }
@@ -221,9 +170,7 @@ function bindHelpers(browser) {
   browser.inputValueAssert = function(selector, value, description, timeout) {
 
     browser.perform(() => comment(description));
-    browser.elementPresent(selector, null, () => {
-      browser.assert.ok(false, description)
-    }, timeout);
+    browser.elementPresent(selector, null, () => { browser.assert.ok(false, description) }, timeout);
 
     var attempts = parseInt((timeout || TIMEOUT) / 1000);
     var currentAttempt = 0;
@@ -296,9 +243,7 @@ function bindHelpers(browser) {
 
   browser.focusOnEl = function(selector, description, timeout) {
     browser.perform(() => comment(description));
-    browser.elementPresent(selector, null, () => {
-      browser.assert.ok(false, description)
-    }, timeout);
+    browser.elementPresent(selector, null, () => { browser.assert.ok(false, description) }, timeout);
 
     browser.execute(function(selector) {
       (function(el) {
@@ -312,9 +257,7 @@ function bindHelpers(browser) {
 
   browser.formSubmit = function(selector, description, timeout) {
     browser.perform(() => comment(description));
-    browser.elementPresent(selector, null, () => {
-      browser.assert.ok(false, description)
-    }, timeout);
+    browser.elementPresent(selector, null, () => { browser.assert.ok(false, description) }, timeout);
     browser.execute(function(selector) {
 
       (function(el) {
@@ -329,9 +272,7 @@ function bindHelpers(browser) {
 
   browser.blurOffEl = function(selector, description, timeout) {
     browser.perform(() => comment(description));
-    browser.elementPresent(selector, null, () => {
-      browser.assert.ok(false, description)
-    }, timeout);
+    browser.elementPresent(selector, null, () => { browser.assert.ok(false, description) }, timeout);
     browser.execute(function(selector) {
 
       (function(el) {
@@ -346,9 +287,7 @@ function bindHelpers(browser) {
 
   browser.getElText = function(selector, onSuccess, description, timeout) {
     browser.perform(() => comment(description));
-    browser.elementPresent(selector, null, () => {
-      browser.assert.ok(false, description)
-    }, timeout);
+    browser.elementPresent(selector, null, () => { browser.assert.ok(false, description) }, timeout);
 
     var attempts = parseInt(TIMEOUT / 1000);
     var currentAttempt = 0;
@@ -388,9 +327,7 @@ function bindHelpers(browser) {
 
   browser.elTextRegex = function(selector, regex, description, timeout) {
     browser.perform(() => comment(description));
-    browser.elementPresent(selector, null, () => {
-      browser.assert.ok(false, description)
-    }, timeout);
+    browser.elementPresent(selector, null, () => { browser.assert.ok(false, description) }, timeout);
     return browser.getElText(selector, function(elsText) {
       var assertRegEx = new RegExp(regex);
       if (!assertRegEx.test(elsText)) {
@@ -402,9 +339,7 @@ function bindHelpers(browser) {
   browser.elTextIs = function(selector, assertText, description, timeout) {
 
     browser.perform(() => comment(description));
-    browser.elementPresent(selector, null, () => {
-      browser.assert.ok(false, description)
-    }, timeout);
+    browser.elementPresent(selector, null, () => { browser.assert.ok(false, description) }, timeout);
 
     var attempts = parseInt((timeout || TIMEOUT) / 1000);
     var currentAttempt = 0;
@@ -429,10 +364,6 @@ function bindHelpers(browser) {
 
   };
 
-  function comment(description) {
-    if (description) {
-      console.log(`${description}`);
-    }
-  }
+  function comment(description) { if (description) { console.log(`${description}`); } }
 
-}
+};
