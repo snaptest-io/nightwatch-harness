@@ -4,15 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/nightwatch tests/hologram/dashboard/staging",
-    "vivid": "./node_modules/.bin/nightwatch vividseats/",
-    "testff": "./node_modules/.bin/nightwatch --env firefox tests/",
-    "harness": "./node_modules/.bin/nightwatch -t tests/harness.js",
-    "browserstack": "./node_modules/.bin/nightwatch -c conf/browserstack.js"
+    "test": "./node_modules/.bin/nightwatch snaptests/tests",
+    "harness": "./node_modules/.bin/nightwatch -t harness.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nightwatch": "^0.9.12"
+    "nightwatch": "0.9.12"
   }
 }
