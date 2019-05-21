@@ -9,19 +9,14 @@
 * Download [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/) and copy to /usr/local/bin (or any folder that makes it available on your path)
 
 *(Windows)*
-* Install NodeJS. ( via https://nodejs.org ).
+* Install NodeJS. ( via https://nodejs.org ).  
 * Clone this repo `git clone <url>`
 * Run `npm install` in the cloned repository
 * Download chromedriver and copy to %systemroot%\System32  (or any folder that makes it available on your ENV path)
 
-### 2. Running via copying & pasting single test code
-  
-* Copy and paste the SnapTest generated code into the harness.js file.
-* Run by typing `npm run harness`. 
+### 2. Run via folder generation
 
-### 3. Run via folder generation (preferred)
-
-* Follow the instructions after generating code for a folder in the SnapTest chrome extension.
+* From the Snaptest extension, Find the dropdown menu next next to a folder and click "View Code".  Copy and run the auto-generated CLI command.  Example: `snaptest -f <folderID> -r nightwatch -s flat -t <APIkey> -a user -d me`
 * Run all by typing `npm test`. 
 
 ---

@@ -1,0 +1,45 @@
+[
+  {
+    "name": "snaptest.io localhost",
+    "id": "S1SINKW3X",
+    "variables": [
+      {
+        "name": "baseUrl",
+        "type": "STRING_VAR",
+        "defaultValue": "http://localhost:8002"
+      }
+    ]
+  },
+  {
+    "name": "snaptest.io prod",
+    "id": "BJMpjAFjE",
+    "variables": [
+      {
+        "name": "baseUrl",
+        "type": "STRING_VAR",
+        "defaultValue": "https://www.snaptest.io"
+      }
+    ]
+  },
+  {
+    "name": "bobs info",
+    "id": "HyrFgrfI4",
+    "variables": [
+      {
+        "name": "first",
+        "type": "STRING_VAR",
+        "defaultValue": "Dolores"
+      },
+      {
+        "name": "last",
+        "type": "STRING_VAR",
+        "defaultValue": "Hope"
+      },
+      {
+        "name": "full",
+        "type": "STRING_VAR",
+        "defaultValue": "${first} ${last}"
+      }
+    ]
+  }
+]

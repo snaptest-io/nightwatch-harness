@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/nightwatch snaptests/tests",
+    "test": "./node_modules/.bin/nightwatch",
     "harness": "./node_modules/.bin/nightwatch -t harness.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nightwatch": "0.9.12"
+    "deep-clone": "^3.0.3",
+    "lodash": "^4.17.11",
+    "nightwatch": "0.9.12",
+    "save": "^2.3.3"
   }
 }
